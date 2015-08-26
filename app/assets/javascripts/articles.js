@@ -2,7 +2,21 @@
 
 function submitComment(event) {
   event.preventDefault();
-  console.log('hey you nailed it!');
+  postCommentData();
+}
+
+function commentData() {
+  return { 
+    comment: {
+    body: $('#comment_body').val(),
+    author_id: $('#comment_author_name').val(),
+    article_id: $('#comment_article_id').val()
+    }
+  };
+}
+
+function postCommentData() {
+  $.post("/comments", commentData())
 }
 
 $(document).ready(function() {
