@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "Article Comments", :type => :feature do
+describe "Article Comments", :type => :feature, :js => true do
   let(:article){ Fabricate(:article) }
 
   it "posts a comment" do
