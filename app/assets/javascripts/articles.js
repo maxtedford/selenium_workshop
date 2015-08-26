@@ -9,7 +9,7 @@ function commentData() {
   return { 
     comment: {
     body: $('#comment_body').val(),
-    author_id: $('#comment_author_name').val(),
+    author_name: $('#comment_author_name').val(),
     article_id: $('#comment_article_id').val()
     }
   };
