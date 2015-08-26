@@ -16,7 +16,9 @@ function commentData() {
 }
 
 function postCommentData() {
-  $.post("/comments", commentData())
+  $.post("/comments", commentData(), function(data) {
+    console.log(data)
+  })
 }
 
 $(document).ready(function() {
