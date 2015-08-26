@@ -17,7 +17,7 @@ function commentData() {
 
 function postCommentData() {
   $.post("/comments", commentData(), function(data) {
-    console.log(data)
+    $('#comments').append(data);
   })
 }
 
